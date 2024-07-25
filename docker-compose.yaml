@@ -4,11 +4,11 @@ services:
     container_name: ${TS_HOST_CONTAINER_NAME}
     hostname: ${TS_HOST_CONTAINER_NAME}
     environment:
-    - TS_AUTHKEY=${TS_OAUTH_KEY}
-    - TS_SERVE_CONFIG=/config/ts-wordpress-docker.json
-    - TS_EXTRA_ARGS=--advertise-tags=tag:container
-    - TS_ACCEPT_DNS=true
-    - TS_STATE_DIR=/var/lib/tailscale
+      - TS_AUTHKEY=${TS_OAUTH_KEY}
+      - TS_SERVE_CONFIG=/config/ts-wordpress-docker.json
+      - TS_EXTRA_ARGS=--advertise-tags=tag:container
+      - TS_ACCEPT_DNS=true
+      - TS_STATE_DIR=/var/lib/tailscale
     volumes:
       - ${PWD}/ts-wordpress-docker/state:/var/lib/tailscale
       - ${PWD}/config:/config
