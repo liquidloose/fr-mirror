@@ -9,8 +9,7 @@ services:
       POSTGRES_PASSWORD: mypassword
 
   wagtail:
-    build: .
-    container_name: wagtail_container
+    container_name: newspaper
     ports:
       - "8000:8000"
     volumes:
